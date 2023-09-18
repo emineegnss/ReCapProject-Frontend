@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BrandComponent } from './components/brand/brand.component';
-import { CarImageComponent } from './components/car-image/car-image.component';
-import { CarComponent } from './components/car/car.component';
+import { CarDetailComponent } from './components/car/car-detail.component';
 
 const routes: Routes = [
-  {path:"",pathMatch:'full',component:CarComponent},
-  {path:"cars",component:CarComponent},
-  {path:"cars/brand/:brandId",component:CarComponent},
+  {path:"",pathMatch:"full",component:CarDetailComponent},
+  {path:"cars",component:CarDetailComponent},
+  {path:"cars/brand/:brandId",component:CarDetailComponent},
 
 ];
 

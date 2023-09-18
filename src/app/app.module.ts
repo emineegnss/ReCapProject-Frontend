@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CarComponent } from './components/car/car.component';
+import { CarDetailComponent } from './components/car/car-detail.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -15,7 +15,7 @@ import { BrandComponent } from './components/brand/brand.component';
     AppComponent,
     RentalComponent,
     NaviComponent,
-    CarComponent,
+    CarDetailComponent,
     CarImageComponent,
     BrandComponent
   ],
