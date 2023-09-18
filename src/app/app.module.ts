@@ -10,6 +10,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarImageComponent } from './components/car-image/car-image.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
 import { BrandComponent } from './components/brand/brand.component';
+import { ColorComponent } from './components/color/color.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BrandComponent } from './components/brand/brand.component';
     CarImageComponent,
     CarDetailComponent,
     BrandComponent,
+    ColorComponent,
   ],
   imports: [
     BrowserModule,
