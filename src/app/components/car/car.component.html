@@ -1,23 +1,16 @@
-<table class="table">
-<thead>
-    <tr>
-    <th>CarId</th>
-    <th>BrandId</th>
-    <th>ColorId</th>
-    <th>ModelYear</th>
-    <th>DailyPrice</th>
-    <th>Description</th>
-</tr>
-</thead>
-<div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status" style="position: absolute; right: 650px; top: 100px;">
-    <span class="visually-hidden">Loading...</span>
+<div *ngIf="dataLoaded==false" class="lds-ellipsis"></div>
+<div class="row row-cols-1 row-cols-md-2 g-4" style="margin-top: 10px; margin-bottom:10px">
+<div class="col" *ngFor="let car of cars">
+  <div class="card">
+    <img  *ngFor="let carImage of carImages" style="height: 330px;" [src]="getImagePath(carImage.imagePath)" class="card-img-top" [alt] ="getImagePath(carImage.imagePath)" />
+    <div class="card-body">
+      <h5>{{car.brandName}}</h5>
+      
+    </div>
+<div class="card-footer d-flex justify-content-between align-items-center">
+<small class="fw-bold text-start">{{car.dailyPrice}} TL / Günlük</small>
+<a routerLink="/cars/{{car.carId}}" class="buton float-end text-center"> Detaylı Bilgi</a>
+</div>
   </div>
-<tr *ngFor="let car of cars">
-<td>{{car.carId}}</td>
-<td>{{car.brandId}}</td>
-<td>{{car.colorId}}</td>
-<td>{{car.modelYear}}</td>
-<td>{{car.dailyPrice}}</td>
-<td>{{car.description}}</td>
-</tr>
-</table>
+</div>
+</div>

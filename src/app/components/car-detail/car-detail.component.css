@@ -1,0 +1,45 @@
+.car-details {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  .car-image {
+    width: 200px; /* Araba fotoğrafının genişliği */
+    height: auto; /* Araba fotoğrafının yüksekliği otomatik ayarlanır */
+    margin-right: 20px;
+  }
+  
+  .car-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .car-info {
+    flex-grow: 1;
+  }
+  
+  .car-brand {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .car-attributes {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .car-attributes li {
+    margin: 5px 0;
+  }
+  
+  .car-attributes span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  

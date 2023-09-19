@@ -7,7 +7,6 @@ import { CarComponent } from './components/car/car.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CarImageComponent } from './components/car-image/car-image.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { ColorComponent } from './components/color/color.component';
@@ -18,10 +17,9 @@ import { ColorComponent } from './components/color/color.component';
     RentalComponent,
     NaviComponent,
     CarComponent,
-    CarImageComponent,
     CarDetailComponent,
     BrandComponent,
-    ColorComponent,
+    ColorComponent
   ],
   imports: [
     BrowserModule,

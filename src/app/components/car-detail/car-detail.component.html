@@ -1,22 +1,21 @@
-<table class="table">
-    <thead>
-        <tr>
-        <th>CarId</th>
-        <th>BrandName</th>
-        <th>ColorName</th>
-        <th>ModelYear</th>
-        <th>DailyPrice</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status" style="position: absolute; right: 650px; top: 100px;">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    <tr *ngFor="let carDetail of carDetails">
-    <td>{{carDetail.carId}}</td>
-    <td>{{carDetail.brandName}}</td>
-    <td>{{carDetail.colorName}}</td>
-    <td>{{carDetail.modelYear}}</td>
-    <td>{{carDetail.dailyPrice}}</td>
-    </tr>
-    </table>
+<div class="car-details">
+  <div class="car-image">
+    <!-- Araba fotoğrafı burada olacak -->
+  </div>
+  <div class="car-info">
+    <h4 *ngIf="carDetails.length > 0" class="car-brand">
+      {{ carDetails[0].brandName | uppercase }}
+    </h4>
+    <ul class="car-attributes">
+      <li *ngIf="carDetails.length > 0">
+        <span><b>Model Yili:</b></span> {{ carDetails[0].modelYear }}
+      </li>
+      <li *ngIf="carDetails.length > 0">
+        <span><b>Renk:</b></span> {{ carDetails[0].colorName }}
+      </li>
+      <li *ngIf="carDetails.length > 0">
+        <span><b>Günlük Fiyat:</b></span> {{ carDetails[0].dailyPrice | currency: "tl" }}
+      </li>
+    </ul>
+  </div>
+</div>
